@@ -13,7 +13,7 @@ RUN install_app_icon.sh $APP_ICON_URL
 
 RUN curl --output openrgb_0.9_amd64_bookworm_b5f46e3.deb https://openrgb.org/releases/release_0.9/openrgb_0.9_amd64_bookworm_b5f46e3.deb
 RUN curl --output plugins/OpenRGBEffectsPlugin_0.9_Bookworm_64_f1411e1.so https://openrgb.org/releases/plugins/effects/release_0.9/OpenRGBEffectsPlugin_0.9_Bookworm_64_f1411e1.so
-RUN curl --output plugins/OpenRGBVisualMapPlugin_0.9_Bullseye_64_bbf30c4.so https://openrgb.org/releases/plugins/visualmap/release_0.9/OpenRGBVisualMapPlugin_0.9_Bullseye_64_bbf30c4.so
+RUN curl --output plugins/OpenRGBVisualMapPlugin_0.9_Bookworm_64_bbf30c4.so https://openrgb.org/releases/plugins/visualmap/release_0.9/OpenRGBVisualMapPlugin_0.9_Bookworm_64_bbf30c4.so
 RUN curl --output plugins/OpenRGBHardwareSyncPlugin_0.9_Bookworm_64_dcefdd5.so https://openrgb.org/releases/plugins/hardwaresync/release_0.9/OpenRGBHardwareSyncPlugin_0.9_Bookworm_64_dcefdd5.so
 
 RUN exec openrgb_0.9_amd64_bookworm_b5f46e3.deb --gui --server --server-port 6742
