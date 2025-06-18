@@ -1,0 +1,2 @@
+# openrgb-webgui
+OpenRGB WebGUI
