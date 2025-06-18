@@ -17,8 +17,6 @@ ARG OpenRGBSchedulerPlugin_URL=https://gitlab.com/OpenRGBDevelopers/OpenRGBSched
 
 WORKDIR /app
 
-RUN install_app_icon.sh $APP_ICON_URL
-
 RUN curl --output OpenRGB.deb $OpenRGB_URL
 RUN curl --output plugins/OpenRGBEffectsPlugin.so $OpenRGBEffectsPlugin_URL
 RUN curl --output plugins/OpenRGBVisualMapPlugin.so $OpenRGBVisualMapPlugin_URL
@@ -26,5 +24,7 @@ RUN curl --output plugins/OpenRGBHardwareSyncPlugin.so $OpenRGBHardwareSyncPlugi
 RUN curl --output plugins/OpenRGBFanSyncPlugin.so $OpenRGBFanSyncPlugin_URL
 RUN curl --output plugins/OpenRGBE131ReceiverPlugin.so $OpenRGBE131ReceiverPlugin_URL
 RUN curl --output plugins/OpenRGBSchedulerPlugin.so $OpenRGBSchedulerPlugin_URL
+
+RUN install_app_icon.sh $APP_ICON_URL
 
 RUN exec OpenRGB.deb --gui --server --server-port 6742
